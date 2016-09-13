@@ -1,0 +1,32 @@
+<!--
+/*
+ * @support
+ * http://www.opensourcetechnologies.com/contactus.html
+ * sales@opensourcetechnologies.com
+* */
+-->
+<modification>  
+   <id>Paypal Hosted Button</id>
+   <version>1.0.0</version>
+   <vqmver>2.5.1</vqmver>
+   <author>OST</author>
+   
+   <file name="catalog/view/theme/*/template/checkout/cart.tpl">
+	   <operation>
+		   <search position="before"><![CDATA[<div class="pull-right"><a href="<?php echo $checkout; ?>" class="btn btn-primary"><?php echo $button_checkout; ?></a></div>]]></search>
+		   <add>
+			   <![CDATA[
+				<!--
+				]]>
+		   </add>
+	   </operation>
+	   <operation>
+		   <search position="after"><![CDATA[<div class="pull-right"><a href="<?php echo $checkout; ?>" class="btn btn-primary"><?php echo $button_checkout; ?></a></div>]]></search>
+		   <add>
+			   <![CDATA[
+				-->
+				]]>
+		   </add>
+	   </operation>
+   </file>
+</modification>
